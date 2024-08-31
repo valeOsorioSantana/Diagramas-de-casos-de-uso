@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor "Analista de Sistemas" as a
+
+package "Sistema de Información" {
+  usecase "Identificar procesos y entidades" as UC1
+  usecase "Definir entradas y salidas de información" as UC2
+  usecase "Dibujar Diagrama de Flujo de Datos" as UC3
+  usecase "Revisar y Aprobar Diagrama" as UC4
+}
+
+a --> UC1
+a --> UC2
+a --> UC3
+a --> UC4
+@enduml

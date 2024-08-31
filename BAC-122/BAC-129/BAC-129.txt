@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package "Plantilla" {
+  usecase "Crear Plantilla" as UC1
+}
+
+u --> UC1
+
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor "Diseñador de Interfaces de Usuario" as d
+
+package "Aplicación" {
+  usecase "Crear Wireframes" as UC1
+}
+
+d --> UC1
+@enduml

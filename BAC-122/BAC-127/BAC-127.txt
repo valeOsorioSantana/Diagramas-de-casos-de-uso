@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+
+actor "Diseñador de Base de Datos" as dbDesigner
+
+usecase "Crear Diagrama de Entidad-Relación (ERD)" as UC1
+
+dbDesigner --> UC1
+
+@enduml
