@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+
+actor "Usuario Registrado" as UR
+actor "Administrador" as A
+
+package "requerimiento BAC-78" {
+  usecase "Ver Feed Personalizado" as UC1
+  usecase "Actualizar Intereses" as UC2
+  usecase "Conectar con Otros Usuarios" as UC3
+  usecase "Recibir Notificaciones de Actualizaciones" as UC4
+  usecase "Recibir Notificaciones de Eventos" as UC5
+  usecase "Recibir Contenido Relevante" as UC6
+  usecase "Administrar Contenido" as UC7
+}
+
+UR --> UC1
+UR --> UC2
+UR --> UC3
+UR --> UC4
+UR --> UC5
+UR --> UC6
+A --> UC7
+
+@enduml

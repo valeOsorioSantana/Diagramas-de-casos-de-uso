@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+actor Usuario as u
+
+package "Integrar funciones de redes sociales para compartir eventos" {
+  usecase "Seleccionar Evento" as UC1
+  usecase "Compartir en Redes Sociales" as UC2
+  usecase "Generar Enlace de Evento" as UC3
+  usecase "Confirmar Compartir" as UC4
+}
+u --> UC1 #line:pink;line.bold
+u --> UC2 #line:pink;line.bold
+UC2 --> UC3 #line:purple;line.bold
+UC2 --> UC4 #line:purple;line.bold
+
+@enduml

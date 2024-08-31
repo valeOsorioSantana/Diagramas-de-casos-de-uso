@@ -1,0 +1,14 @@
+@startuml
+
+left to right direction
+actor Usuario as u
+
+package "Comentar y calificar eventos" {
+  usecase "Comentar Evento" as UC1
+  usecase "Calificar Evento" as UC2
+}
+
+u --> UC1 #line:blue;line.bold
+u --> UC2 #line:blue;line.bold
+
+@enduml
