@@ -1,0 +1,14 @@
+@startuml
+
+left to right direction
+actor us
+
+package Gestionar-Login {
+    us -->(Sistema de Login) #line:blue
+    us --> (Iniciar sesión) #line:blue
+    (Iniciar sesión) --> (Validar credenciales)#line:red
+    (Validar credenciales) --> (Acceder a datos y funcionalidades)#line:red
+    (Acceder a datos y funcionalidades) --> (Mostrar interfaz personalizada)#line:red
+}
+
+@enduml

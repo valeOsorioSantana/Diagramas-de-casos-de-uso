@@ -1,0 +1,23 @@
+@startuml
+!define RECTANGLE class
+left to right direction
+
+actor "Organizador de eventos" as or
+actor "Asistente" as asi
+
+package Capturar-información-de-los-asistentes-durante-el-proceso-de-registro {
+usecase "Registrar asistente" as UC1
+usecase "Capturar información detallada del asistente" as UC2
+usecase "Gestionar datos del asistente" as UC3
+usecase "Proporcionar experiencia personalizada" as UC4
+}
+
+or --> UC1 #line:blue
+or --> UC3 #line:blue
+or --> UC4 #line:blue
+
+asi --> UC1 #line:yellow
+UC1 --> UC2 #line:red
+UC2 --> UC3 #line:red
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+
+left to right direction
+actor "Usuario" as us
+
+package Permitir-a-los-usuarios-editar-su-perfil-de-registro {
+    us -->(Sistema de Perfil de Usuario)#line:purple 
+    us --> (Editar Perfil)#line:purple
+    (Editar Perfil) --> (Actualizar Información)#line:blue
+    (Actualizar Información) --> (Guardar Cambios)#line:blue
+}
+
+@enduml

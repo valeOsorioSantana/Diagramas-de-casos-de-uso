@@ -1,0 +1,17 @@
+@startuml
+!define RECTANGLE class
+left to right direction
+
+actor "Usuario" as us
+
+package Generar-y-enviar-confirmaciones-de-registro-por-correo-electrónico {
+  usecase "Plataforma de Registro de Eventos" as UC3
+  usecase "Registrarse en el Evento" as UC1
+  usecase "Enviar Confirmación por Correo Electrónico" as UC2
+}
+
+us --> UC1 #line:green
+us --> UC3 #line:green
+UC1 --> UC2 #line:blue;line.bold;text:blue : Incluye
+UC2 --> us #line:blue;line.bold;text:blue : Envia a
+@enduml
