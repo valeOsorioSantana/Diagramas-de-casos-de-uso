@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+actor Usuario as user
+
+package "Recomendaciones de Eventos" {
+  usecase "Configurar Intereses" as UC1
+  usecase "Consultar Recomendaciones" as UC2
+}
+
+package "Sistema de Recomendación" {
+  usecase "Analizar Comportamiento Pasado" as UC3
+  usecase "Generar Recomendaciones" as UC4
+  usecase "Enviar Recomendaciones" as UC5
+}
+
+user --> UC1
+user --> UC2
+
+UC3 --> UC4
+UC4 --> UC5
+@enduml

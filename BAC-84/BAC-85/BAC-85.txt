@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+
+actor Usuario as user
+
+package "Personalización del Perfil" {
+  usecase "Crear Perfil" as UC1
+  usecase "Modificar Perfil" as UC2
+  usecase "Seleccionar Diseño" as UC3
+  usecase "Configurar Preferencias" as UC4
+}
+
+package "Sistema" {
+  usecase "Almacenar Perfil" as UC5
+  usecase "Aplicar Diseño" as UC6
+  usecase "Actualizar Preferencias" as UC7
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC4
+
+UC1 --> UC5
+UC2 --> UC5
+UC3 --> UC6
+UC4 --> UC7
+@enduml

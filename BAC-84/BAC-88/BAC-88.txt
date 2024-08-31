@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+actor Usuario as user
+
+package "Seguimiento de Intereses" {
+  usecase "Seguir Eventos" as UC1
+  usecase "Seguir Oradores" as UC2
+  usecase "Seguir Temas de Interés" as UC3
+  usecase "Consultar Seguimientos" as UC4
+}
+
+package "Sistema" {
+  usecase "Registrar Seguimiento" as UC5
+  usecase "Notificar Actualizaciones" as UC6
+  usecase "Mostrar Seguimientos" as UC7
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC4
+
+UC1 --> UC5
+UC2 --> UC5
+UC3 --> UC5
+UC4 --> UC7
+
+UC5 --> UC6
+
+@enduml
