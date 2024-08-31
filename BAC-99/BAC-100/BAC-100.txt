@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor Administrador as admin
+
+package "Plataforma de Eventos" {
+  usecase "Acceder al Panel de Administración" as UC1
+  usecase "Seleccionar Evento" as UC2
+  usecase "Iniciar Recopilación de Datos" as UC3
+  usecase "Procesar Datos de Asistencia y Participación" as UC4
+  usecase "Presentar Datos Detallados" as UC5
+  usecase "Analizar Información" as UC6
+}
+
+admin --> UC1
+admin --> UC2
+admin --> UC3
+UC3 --> UC4
+UC4 --> UC5
+admin --> UC6
+@enduml

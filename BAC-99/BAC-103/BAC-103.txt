@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor Administrador as admin
+package "Sistema de Análisis de Datos" {
+  usecase "Analizar Preferencias de Usuarios" as UC1
+  usecase "Generar Informe de Efectividad" as UC2
+  usecase "Identificar Áreas de Mejora" as UC3
+  usecase "Implementar Mejoras en Eventos" as UC4
+}
+admin --> UC1
+admin --> UC2
+admin --> UC3
+admin --> UC4
+@enduml

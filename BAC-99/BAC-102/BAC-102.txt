@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor "Administrador" as admin
+package "Plataforma de Eventos" {
+  usecase "Generar Informes de Rendimiento" as UC1
+  usecase "Generar Informes de Satisfacción" as UC2
+}
+admin --> UC1
+admin --> UC2
+@enduml

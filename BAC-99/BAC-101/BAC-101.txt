@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor "USUARIO" as u
+package "Plataforma de Análisis de Datos" {
+  usecase "Seleccionar Datos" as UC1
+  usecase "Aplicar Técnicas de Análisis" as UC2
+  usecase "Revisar Resultados" as UC3
+}
+u --> UC1
+u --> UC2
+u --> UC3
+@enduml
