@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+actor Usuario as us
+
+package "Filtrar Eventos" {
+  usecase "Filtrar eventos por fecha" as UC1
+  usecase "Filtrar eventos por ubicación" as UC2
+  usecase "Filtrar eventos por categoría" as UC3
+}
+
+us --> UC1 #line:purple
+us --> UC2 #line:purple
+us --> UC3 #line:purple
+
+@enduml

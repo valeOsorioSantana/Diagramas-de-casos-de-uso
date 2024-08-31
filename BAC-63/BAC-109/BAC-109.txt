@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+actor Usuario as u
+
+package "Informacion Detallada de Eventos" {
+  usecase "Ver lista de eventos disponibles" as UC2
+  usecase "Seleccionar un evento" as UC3
+  usecase "Ver detalles del evento" as UC4
+  usecase "Seleccionar entrada y participar" as UC6
+}
+
+u --> UC2#line:red;line.bold
+u --> UC3#line:red;line.bold
+u --> UC4#line:red;line.bold
+u --> UC6#line:red;line.bold
+
+@enduml

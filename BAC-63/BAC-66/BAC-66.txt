@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+
+actor Usuario as us
+
+package "Guardar Eventos en Favoritos"{
+  usecase "Ver Detalles del Evento" as UC2
+  usecase "Guardar en Calendario Personal" as UC3
+  usecase "Confirmar Guardado" as UC4
+}
+
+us --> UC2 #line:red;line.bold;
+us --> UC3 #line:red;line.bold;text:red : Guardar eventos
+UC3 --> UC4 #line:green;line.bold;
+
+@enduml

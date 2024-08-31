@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+actor "Usuario Interesado" as ui
+
+package calendario-con-todos-los-eventos-disponibles {
+  usecase "Seleccionar Ver Calendario" as UC2
+  usecase "Mostrar calendario con todos los eventos disponibles" as UC3
+  usecase "Ver Detalle de Evento" as UC4
+}
+
+ui --> UC2 #line:yellow;line.bold;text:blue : Explorar Eventos
+ui --> UC3 #line:yellow;line.bold;text:blue : Ver eventos
+UC2 --> UC3 #line:purple
+UC3 --> UC4 #line:purple
+
+@enduml

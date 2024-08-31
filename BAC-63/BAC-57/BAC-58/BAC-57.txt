@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+actor "Usuario Interesado" as Us
+
+package Registrarse-para-eventos {
+Us --> (Registrarse en la Plataforma) #line:purple
+Us --> (Ver Lista de Eventos)#line:purple
+Us --> (Registrarse para un Evento)#line:purple
+(Registrarse para un Evento) --> (Recibir Información del Evento)#line:blue
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+left to right direction
+actor Usuario as u
+
+package "Recordatorios para Eventos Guardados" {
+  usecase "Guardar Evento" as UC1
+  usecase "Recibir Recordatorio Automático" as UC3
+}
+
+u --> UC1 #line:purple;line.bold
+UC1 --> UC3 #line:blue;line.bold
+
+@enduml
