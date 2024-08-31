@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package "cancelación y reembolso"{
+  usecase "Solicitar Cancelación" as UC1
+  usecase "Verificar Política de Cancelación" as UC2
+  usecase "Procesar Reembolso" as UC3
+}
+
+u --> UC1 #line:blue;line.bold
+UC1 --> UC2 #line:green;line.bold
+UC2 --> UC3 #line:green;line.bold
+
+@enduml

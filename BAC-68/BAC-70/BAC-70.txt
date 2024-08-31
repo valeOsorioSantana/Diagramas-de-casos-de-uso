@@ -1,0 +1,15 @@
+@startuml
+
+left to right direction
+actor Usuario as u
+
+package Plataforma {
+  usecase "Seleccionar Evento" as UC1
+  usecase "Elegir Entradas" as UC2
+  usecase "Confirmar Compra" as UC4
+}
+u --> UC1 #line:red;line.bold
+u --> UC2 #line:red;line.bold
+u --> UC4 #line:red;line.bold
+
+@enduml

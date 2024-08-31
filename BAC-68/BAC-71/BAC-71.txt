@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+actor Usuario as u
+actor Sistema as s
+
+package "Metodos de pago" {
+  usecase "Seleccionar Método de Pago" as UC1
+  usecase "Procesar Pago" as UC2
+  usecase "Confirmar Transacción" as UC3
+}
+
+u --> UC1 #line:blue;line.bold
+UC1 --> UC2 #line:red;line.bold
+UC2 --> UC3 #line:red;line.bold
+s --> UC2 #line:green;line.bold
+s --> UC3 #line:green;line.bold
+@enduml

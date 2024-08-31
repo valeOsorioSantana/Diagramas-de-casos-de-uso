@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+
+actor Administrador as a
+actor Organizador as o
+
+package "Generar y enviar entradas electrónicas por correo electrónico" {
+  usecase "Generar tickets electronicos" as UC1
+  usecase "Enviar tickets electronicos por email" as UC2
+}
+
+a --> UC1 #line:purple;line.bold
+a --> UC2 #line:purple;line.bold
+o --> UC1 #line:blue;line.bold
+o --> UC2 #line:blue;line.bold
+
+@enduml
