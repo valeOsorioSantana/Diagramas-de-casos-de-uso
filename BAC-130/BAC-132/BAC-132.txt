@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor User as u
+
+package "Support System" {
+  usecase "Complete Satisfaction Survey" as UC1
+}
+
+u --> UC1
+@enduml
