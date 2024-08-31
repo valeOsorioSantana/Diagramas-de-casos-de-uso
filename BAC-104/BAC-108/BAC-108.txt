@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor Usuario as u
+package "Gestión de Privacidad" {
+  usecase "Seleccionar Opciones de Privacidad" as UC1
+  usecase "Dar Consentimiento" as UC2
+  usecase "Guardar Preferencias" as UC3
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+UC1 --> UC2 : <<incluye>>
+UC2 --> UC3 : <<incluye>>
+@enduml
