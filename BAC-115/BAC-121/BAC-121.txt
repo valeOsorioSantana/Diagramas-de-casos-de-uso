@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor "Analista de sistemas" as AS
+package "Gestión del Proyecto" {
+  usecase "Revisar Requisitos" as UC1
+  usecase "Identificar Tareas" as UC2
+  usecase "Organizar y Priorizar Backlog" as UC3
+  usecase "Documentar y Distribuir Backlog" as UC4
+}
+AS --> UC1
+AS --> UC2
+AS --> UC3
+AS --> UC4
+@enduml

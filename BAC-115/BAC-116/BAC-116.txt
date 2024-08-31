@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor "Analista de sistemas" as a
+package "Sistema de Información" {
+  usecase "Redactar Requisitos" as UC1
+  usecase "Identificar Problemas" as UC2
+  usecase "Proponer Recomendaciones" as UC3
+  usecase "Redactar Informe" as UC4
+}
+a --> UC1
+a --> UC2
+a --> UC3
+a --> UC4
+@enduml

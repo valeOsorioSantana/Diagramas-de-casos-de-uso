@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor "Analista de sistemas" as AS
+package "Requerimientos" {
+  usecase "Especificar requisitos funcionales" as UC1
+  usecase "Especificar requisitos no funcionales" as UC2
+  usecase "Crear diagrama de requerimientos" as UC3
+  usecase "Compartir con partes interesadas" as UC4
+}
+AS --> UC1
+AS --> UC2
+UC1 --> UC3
+UC2 --> UC3
+UC3 --> UC4
+@enduml
