@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor "Organizador de Evento" as oe
+actor "Administrador de Plataforma" as ap
+
+package "BAC-112" {
+    usecase "Agregar Información del Evento" as UC1
+    usecase "Ver Información del Evento" as UC2
+    usecase "Editar Información del Evento" as UC3
+    usecase "Eliminar Información del Evento" as UC4
+    usecase "Aprobar Publicación del Evento" as UC5
+}
+
+oe --> UC1 : Agrega información
+oe --> UC3 : Edita información
+oe --> UC4 : Elimina información
+ap --> UC5 : Aprueba publicación
+ap --> UC2 : Ve información
+
+@enduml

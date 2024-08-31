@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor "Usuario de la Aplicación" as ua
+actor "Organizador de Evento" as oe
+
+package "BAC-83" {
+    usecase "Agregar Información de Sesiones" as UC1
+    usecase "Ver Horarios y Detalles de Sesiones" as UC2
+    usecase "Editar Información de Sesiones" as UC3
+    usecase "Eliminar Información de Sesiones" as UC4
+}
+
+oe --> UC1 : Agrega información
+oe --> UC3 : Edita información
+oe --> UC4 : Elimina información
+ua --> UC2 : Ve horarios y detalles
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+actor "Organizador de Evento" as oe
+actor "Orador" as o
+
+package "BAC-82" {
+    usecase "Agregar Información de Oradores" as UC1
+    usecase "Ver Información de Oradores" as UC2
+    usecase "Editar Información de Oradores" as UC3
+    usecase "Eliminar Información de Oradores" as UC4
+    usecase "Aprobar Información de Oradores" as UC5
+    usecase "Notificar a Oradores" as UC6
+}
+
+oe --> UC1 : Agrega información
+oe --> UC3 : Edita información
+oe --> UC4 : Elimina información
+o --> UC2 : Ve información
+oe --> UC6 : Notifica cambios
+o <-- UC6 : Recibe notificación
+
+@enduml

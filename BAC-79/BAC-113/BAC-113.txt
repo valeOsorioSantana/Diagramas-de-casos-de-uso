@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+actor Administrador as admin
+
+package "Gestión de Imágenes" {
+  usecase "Subir Imágenes" as UC1
+  usecase "Eliminar Imágenes" as UC2
+  usecase "Actualizar Imágenes" as UC3
+  usecase "Consultar Imágenes" as UC4
+}
+
+package "Sistema de Almacenamiento" {
+  usecase "Almacenar Imágenes" as UC5
+  usecase "Recuperar Imágenes" as UC6
+  usecase "Eliminar Imágenes" as UC7
+  usecase "Actualizar Imágenes" as UC8
+}
+
+admin --> UC1
+admin --> UC2
+admin --> UC3
+admin --> UC4
+
+UC1 --> UC5
+UC2 --> UC7
+UC3 --> UC8
+UC4 --> UC6
+
+@enduml

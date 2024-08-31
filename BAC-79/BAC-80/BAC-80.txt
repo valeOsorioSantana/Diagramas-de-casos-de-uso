@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "Event Organizer" as eo
+actor "Platform Admin" as pa
+actor "Attendee" as a
+
+package "BAC-80" {
+    usecase "Add Speaker Information" as UC1
+    usecase "View Speaker Information" as UC2
+    usecase "Edit Speaker Information" as UC3
+    usecase "Delete Speaker Information" as UC4
+    usecase "Approve Speaker Information" as UC5
+}
+
+eo --> UC1 : Adds information
+eo --> UC3 : Edits information
+eo --> UC4 : Deletes information
+a --> UC2 : Views information
+pa --> UC5 : Approves information
+
+@enduml

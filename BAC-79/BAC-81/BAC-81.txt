@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "Organizador de Evento" as oe
+actor "Administrador de Plataforma" as ap
+actor "Asistente" as a
+
+package "Plataforma de Gestión de Eventos" {
+    usecase "Agregar Información de Oradores" as UC1
+    usecase "Ver Información de Oradores" as UC2
+    usecase "Editar Información de Oradores" as UC3
+    usecase "Eliminar Información de Oradores" as UC4
+    usecase "Aprobar Información de Oradores" as UC5
+}
+
+oe --> UC1 : Agrega información
+oe --> UC3 : Edita información
+oe --> UC4 : Elimina información
+a --> UC2 : Ve información
+ap --> UC5 : Aprueba información
+
+@enduml
