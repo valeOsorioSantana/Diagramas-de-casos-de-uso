@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+actor Usuario as user
+
+package "Información del Evento" {
+  usecase "Consultar Información sobre Patrocinadores" as UC1
+  usecase "Consultar Información sobre Expositores" as UC2
+}
+
+package "Sistema" {
+  usecase "Mostrar Información sobre Patrocinadores" as UC3
+  usecase "Mostrar Información sobre Expositores" as UC4
+}
+
+user --> UC1
+user --> UC2
+
+UC3 --> UC1
+UC4 --> UC2
+
+@enduml

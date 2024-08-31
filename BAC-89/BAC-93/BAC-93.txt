@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor Organizador as org
+actor Patrocinador as pat
+actor Expositor as exp
+
+rectangle "Sistema de Gestión de Eventos" {
+    usecase "Proporcionar métricas de rendimiento a patrocinadores" as UC1
+    usecase "Proporcionar métricas de rendimiento a expositores" as UC2
+}
+
+org --> UC1 : Solicitar
+org --> UC2 : Solicitar
+pat --> UC1 : Recibir
+exp --> UC2 : Recibir
+@enduml

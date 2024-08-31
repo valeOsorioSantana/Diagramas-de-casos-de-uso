@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+
+actor Organizador as org
+
+package "Administración de Acuerdos de Patrocinio" {
+  usecase "Crear Acuerdo de Patrocinio" as UC1
+  usecase "Modificar Acuerdo de Patrocinio" as UC2
+  usecase "Consultar Acuerdos de Patrocinio" as UC3
+  usecase "Eliminar Acuerdo de Patrocinio" as UC4
+}
+
+package "Sistema" {
+  usecase "Almacenar Acuerdos de Patrocinio" as UC5
+  usecase "Actualizar Acuerdos de Patrocinio" as UC6
+  usecase "Mostrar Acuerdos de Patrocinio" as UC7
+}
+
+org --> UC1
+org --> UC2
+org --> UC3
+org --> UC4
+
+UC1 --> UC5
+UC2 --> UC6
+UC3 --> UC7
+UC4 --> UC5
+@enduml
