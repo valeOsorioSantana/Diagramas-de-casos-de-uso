@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor Usuario
+package Plataforma {
+  usecase "Enviar Mensaje" as UC1
+  usecase "Recibir Mensaje" as UC2
+  usecase "Hacer Pregunta" as UC3
+  usecase "Proporcionar Comentarios" as UC4
+  usecase "Recibir Notificación" as UC5
+  usecase "Mantenerse Actualizado" as UC6
+}
+Usuario --> UC1
+Usuario --> UC2
+Usuario --> UC3
+Usuario --> UC4
+Usuario --> UC5
+Usuario --> UC6
+@enduml

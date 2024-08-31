@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+actor Usuario_Registrado as u
+
+package "Notificaciones de Cambios" {
+  usecase "Confirmar Asistencia a Eventos" as UC1
+  usecase "Consultar Eventos y Horarios" as UC2
+  usecase "Recibir Notificaciones sobre Cambios" as UC3
+}
+
+package "Sistema" {
+  usecase "Detectar Cambios en Eventos" as UC4
+  usecase "Notificar a Usuarios sobre Cambios" as UC5
+  usecase "Actualizar Información de Eventos" as UC6
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+
+UC4 --> UC5
+UC6 --> UC5
+@enduml

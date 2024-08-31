@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor "Organizador" as org
+actor "Asistente" as asst
+
+package "Plataforma de Eventos" {
+  usecase "Enviar Mensajes" as UC1
+  usecase "Recibir Mensajes" as UC2
+
+}
+
+org --> UC1
+asst --> UC2
+@enduml

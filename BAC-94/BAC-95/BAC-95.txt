@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+actor Usuario as u
+
+package "Recordatorios Automáticos" {
+  usecase "Suscribirse a Recordatorios de Eventos" as UC1
+  usecase "Consultar Eventos Próximos" as UC2
+}
+
+package "Sistema" {
+  usecase "Programar Recordatorios Automáticos" as UC3
+  usecase "Enviar Recordatorios de Eventos" as UC4
+  usecase "Gestionar Suscripciones a Recordatorios" as UC5
+}
+
+u --> UC1
+u --> UC2
+
+UC3 --> UC4
+UC5 --> UC4
+
+@enduml
